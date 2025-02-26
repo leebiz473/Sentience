@@ -48,6 +48,9 @@ yarn-error.log*
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
 
+# Ignore all Jetbrains local config
+.idea/**
+
 # Gradle
 .idea/**/gradle.xml
 .idea/**/libraries
