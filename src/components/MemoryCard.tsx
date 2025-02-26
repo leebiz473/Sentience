@@ -8,10 +8,10 @@ export default function MemoryCard(props: MemoryCardProps) {
     const emojiArray = ['🐶', '🐷', '🐙', '🐛', '🐵', '🐶', '🐷', '🐙', '🐛', '🐵'];
 
     const emojiEl = emojiArray.map((emoji, index) =>
-        <li key={index} className="card-item">
+        <li className="card-item" key={index}>
             <button
                 className="btn btn--emoji"
-                onClick={() => props.handleClick(emoji)}
+                onClick={() => { props.handleClick(emoji); }}
             >
                 {emoji}
             </button>

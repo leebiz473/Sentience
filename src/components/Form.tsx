@@ -1,5 +1,6 @@
-import RegularButton from './RegularButton'
 import React from "react";
+
+import RegularButton from './RegularButton'
 
 interface FormButton {
     handleSubmit: (e: React.FormEvent) => void;
