@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import RegularButton from './RegularButton'
+import RegularButton from './RegularButton';
 
 interface FormButton {
     handleSubmit: (e: React.FormEvent) => void;
@@ -13,5 +13,5 @@ export default function Form({ handleSubmit }: FormButton) {
                 Start Game
             </RegularButton>
         </form>
-    )
+    );
 }

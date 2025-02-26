@@ -1,7 +1,7 @@
 // @ts-check
 
 import eslint from "@eslint/js";
-import perfectionist from "eslint-plugin-perfectionist";
+import process from "node:process";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
@@ -11,6 +11,10 @@ export default tseslint.config(
             "src/reportWebVitals.ts",  // Ignore specific TypeScript file
             "node_modules/",           // Ignore node_modules folder
         ],
+        rules: {
+            "quotes": ["error", "single"], // Enforce single quotes
+            "semi": ["error", "always"], // Enforce semi-colons
+        },
     },
     eslint.configs.recommended,
     tseslint.configs.strictTypeChecked,
@@ -19,9 +23,9 @@ export default tseslint.config(
         languageOptions: {
             parserOptions: {
                 projectService: true,
-                tsconfigRootDir: import.meta.dirname,
+                tsconfigRootDir: process.cwd(),
             },
         },
     },
-    perfectionist.configs["recommended-natural"],
 );
+
