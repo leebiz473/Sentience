@@ -20,7 +20,17 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
+  "paths": {
+    "@/*": ["src/*"],
+  },
   "include": [
-    "src"
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "eslint.config.mjs"
+  ],
+  "exclude": [
+    "node_modules",
+    "public/build",
+    "dist"
   ]
 }

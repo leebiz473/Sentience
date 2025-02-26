@@ -1,0 +1,9 @@
+node_modules/
+dist/
+build/
+public/
+.eslintcache
+eslint.config.mjs
+*.config.js
+reportWebVitals.ts
+src/index.tsx

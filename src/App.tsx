@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
 
-function App() {
+import Form from './components/Form'
+import MemoryCard from './components/MemoryCard'
+
+export default function App() {
+  const [isGameOn, setIsGameOn] = useState(false)
+
+  function startGame(e: React.FormEvent) {
+    e.preventDefault()
+    setIsGameOn(true)
+  }
+
+  function turnCard() {
+    console.log("Memory card clicked")
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <main>
+        <h1>Memory</h1>
+        {!isGameOn && <Form handleSubmit={startGame} />}
+        {isGameOn && <MemoryCard handleClick={turnCard} />}
+      </main>
+  )
 }
-
-export default App;
