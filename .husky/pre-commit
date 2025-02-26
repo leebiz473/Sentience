@@ -1,1 +1,1 @@
-eslint . --fix
+eslint . --config eslint.config.mjs --no-cache --fix
