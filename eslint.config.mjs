@@ -6,7 +6,11 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
     {
-        ignores: ["**/*.js"],
+        ignores: [
+            "eslint.config.mjs",       // Ignore the ESLint config file
+            "src/reportWebVitals.ts",  // Ignore specific TypeScript file
+            "node_modules/",           // Ignore node_modules folder
+        ],
     },
     eslint.configs.recommended,
     tseslint.configs.strictTypeChecked,
