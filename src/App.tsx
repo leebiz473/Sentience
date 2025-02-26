@@ -1,18 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-import Form from './components/Form'
-import MemoryCard from './components/MemoryCard'
+import Form from './components/Form';
+import MemoryCard from './components/MemoryCard';
 
 export default function App() {
-  const [isGameOn, setIsGameOn] = useState(false)
+  const [isGameOn, setIsGameOn] = useState(false);
 
   function startGame(e: React.FormEvent) {
-    e.preventDefault()
-    setIsGameOn(true)
+    e.preventDefault();
+    setIsGameOn(true);
   }
 
   function turnCard() {
-    console.log("Memory card clicked")
+    console.log('Memory card clicked');
   }
 
   return (
@@ -21,5 +21,5 @@ export default function App() {
         {!isGameOn && <Form handleSubmit={startGame} />}
         {isGameOn && <MemoryCard handleClick={turnCard} />}
       </main>
-  )
+  );
 }
